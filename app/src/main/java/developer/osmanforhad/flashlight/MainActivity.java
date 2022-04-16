@@ -7,7 +7,6 @@ import android.widget.CompoundButton;
 import android.widget.ToggleButton;
 import android.hardware.Camera;
 
-import java.lang.reflect.Parameter;
 
 public class MainActivity extends AppCompatActivity {
     //__Define Variables__//
@@ -37,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     toggleButton.setBackgroundResource(R.drawable.ic_off);
+                    //Odd Flash Fight from Android Mobile Camera
+                    camera.stopPreview();
+                    camera.release();
                 }
             }
         });
